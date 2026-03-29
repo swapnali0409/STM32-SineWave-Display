@@ -53,6 +53,42 @@ Instead of reading real signals, the waveform is mathematically generated using 
 
 ---
 
+## ST7789 TFT Display Connections
+
+| TFT Pin    | STM32 Pin | Description           |
+| ---------- | --------- | --------------------- |
+| VCC        | 3.3V      | Power supply          |
+| GND        | GND       | Ground                |
+| SCL (SCK)  | PA5       | SPI Clock             |
+| SDA (MOSI) | PA7       | SPI Data              |
+| RES (RST)  | PA0       | Reset pin             |
+| DC (A0)    | PA1       | Data/Command control  |
+| CS         | PA2       | Chip Select           |
+| BLK        | 3.3V      | Backlight (always ON) |
+
+```
+## STM32 Peripheral Configuration
+
+## SPI1 Configuration
+
+Mode: Master
+Direction: 2 Lines (Full Duplex)
+Data Size: 8-bit
+Clock Polarity: Low
+Clock Phase: 1st Edge
+Baud Rate Prescaler: 8
+First Bit: MSB
+
+## DMA Configuration
+DMA1 Channel3 used for SPI TX
+Enables faster display updates
+
+## Notes
+SPI is used to communicate with the TFT display
+GPIO pins (PA0, PA1, PA2) are used for control signals (RST, DC, CS)
+DMA helps improve performance for graphics rendering
+
+
 ##  Output
 
 Displays a moving sine wave on the TFT screen similar to an oscilloscope display.
