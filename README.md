@@ -97,6 +97,8 @@ DMA helps improve performance for graphics rendering
 ##  Output
 
 Displays a moving sine wave on the TFT screen similar to an oscilloscope display.
+<img width="899" height="1599" alt="image" src="https://github.com/user-attachments/assets/1207aecd-08d8-4fa3-872c-f4eab0dc7ea4" />
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/66781109-d49b-40a0-a8d6-6dcfdaa6abaa" />
 
 ---
 
